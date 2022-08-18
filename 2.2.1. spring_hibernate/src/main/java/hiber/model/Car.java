@@ -6,11 +6,7 @@ import javax.persistence.*;
 @Table(name = "cars")
 public class Car {
 
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "user_id")
-//    private User user;
     @Column(name = "model")
-
     private String model;
 
     @Column(name = "series")
@@ -18,7 +14,9 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
 
     public String getModel() {
         return model;
